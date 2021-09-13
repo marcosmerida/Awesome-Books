@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 const booklist = document.getElementById('books');
 let BookArray = [];
 
