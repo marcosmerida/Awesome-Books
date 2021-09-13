@@ -7,7 +7,7 @@ function printScreen() {
     BookArray = [];
   }
   booklist.innerHTML = '';
-  BookArray.forEach(function (value, index) {
+  BookArray.forEach((value, index) => {
     const book = '<li> <p>' + value[0] + '</p> <p>'
       + value[1] + '</p>'
       + '<button onclick="removeBookFroList(' + index + ')">Remove</button><hr></li>';
