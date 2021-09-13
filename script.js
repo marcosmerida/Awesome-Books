@@ -1,9 +1,5 @@
-let booklist = document.getElementById("books");
-let submitbutton = document.getElementById("button");
+const booklist = document.getElementById('books');
 let BookArray = [];
-
-printScreen();
-
 
 function addBookToList(){
     let titleinput = document.getElementById('title').value;
@@ -22,19 +18,21 @@ function removeBookFroList(index){
 
 
 function printScreen(){
-    BookArray = JSON.parse(localStorage.getItem("data"));
-    booklist.innerHTML = "";
+    BookArray = JSON.parse(localStorage.getItem('data'));
+    booklist.innerHTML = '';
     BookArray.forEach(function(value, index){
         let book = '<li> <p>' + value[0] + '</p> <p>' + 
     value[1] + '</p>'+ 
     '<button onclick="removeBookFroList('+index+')">Remove</button><hr></li>';
     let liTag = document.createElement('li');
-    liTag.setAttribute("id", index + ''); 
+    liTag.setAttribute('id', index + ''); 
     liTag.innerHTML = book.trim();
     booklist.appendChild(liTag)
     })
 }
 
+printScreen();
+
 function updateBookStorage(){
-    localStorage.setItem("data", JSON.stringify(BookArray))
+    localStorage.setItem('data', JSON.stringify(BookArray))
 }
