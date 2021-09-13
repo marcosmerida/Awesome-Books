@@ -8,9 +8,7 @@ function printScreen() {
   }
   booklist.innerHTML = '';
   BookArray.forEach((value, index) => {
-    const book = '<li> <p>' + value[0] + '</p> <p>'
-      + value[1] + '</p>'
-      + '<button onclick="removeBookFroList(' + index + ')">Remove</button><hr></li>';
+    const book = `<li> <p> ${value[0]}</p> <p>${value[1]}</p><button onclick="removeBookFroList(${index})">Remove</button><hr></li>`;
     const liTag = document.createElement('li');
     liTag.setAttribute('id', index);
     liTag.innerHTML = book.trim();
