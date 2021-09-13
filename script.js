@@ -1,36 +1,40 @@
 let booklist = document.getElementById("books");
 let submitbutton = document.getElementById("button");
-let counter = 1;
 let BookArray = [];
 
-/*  function Addbook(){
+printScreen();
+
+
+function addBookToList(){
     let titleinput = document.getElementById('title').value;
     let authorinput = document.getElementById('author').value;
+    BookArray.push([titleinput, authorinput]);
+    updateBookStorage()
+    printScreen()
+}
 
-    let book = '<li> <p>' + titleinput + '</p> <p>' + 
-    authorinput + '</p>'+ 
-    '<button onclick="removeBook('+counter+')">Remove</button><hr></li>';
+
+function removeBookFroList(index){
+    BookArray.splice(index,1);
+    updateBookStorage()
+    printScreen();
+}
+
+
+function printScreen(){
+    BookArray = JSON.parse(localStorage.getItem("data"));
+    booklist.innerHTML = "";
+    BookArray.forEach(function(value, index){
+        let book = '<li> <p>' + value[0] + '</p> <p>' + 
+    value[1] + '</p>'+ 
+    '<button onclick="removeBookFroList('+index+')">Remove</button><hr></li>';
     let liTag = document.createElement('li');
-    liTag.setAttribute("id", counter + ''); 
+    liTag.setAttribute("id", index + ''); 
     liTag.innerHTML = book.trim();
     booklist.appendChild(liTag)
-    counter++;
+    })
 }
-function removeBook(id){
-    let idTag = document.getElementById(id);
-    booklist.removeChild(idTag);
-} */
 
-function Addbook(){
-    //!Getting values from the input
-    let titleinput = document.getElementById('title').value;
-    let authorinput = document.getElementById('author').value;
-    //!Appending data to the array
-    BookArray.push([titleinput, authorinput]);
-    let bval = "";
-    for(i = o; i <BookArray.length; i++){
-        bval = bval + BookArray[i];
-    }
-    //!displaying array data
-    document.getElementById('').innerHTML = bval;
+function updateBookStorage(){
+    localStorage.setItem("data", JSON.stringify(BookArray))
 }
