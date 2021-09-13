@@ -1,23 +1,36 @@
 let booklist = document.getElementById("books");
-let titleinput = document.getElementById("title");
-let authorinput = document.getElementById("author");
 let submitbutton = document.getElementById("button");
 let counter = 1;
+let BookArray = [];
 
-function Addbook(){
-    let booktitle = titleinput.value;
-    let bookauthor = authorinput.value;
+/*  function Addbook(){
+    let titleinput = document.getElementById('title').value;
+    let authorinput = document.getElementById('author').value;
 
-
-    let book = '<li id="'+counter+'"> <p>' + booktitle + '</p> <p>' + 
-    bookauthor + '</p>'+ 
+    let book = '<li> <p>' + titleinput + '</p> <p>' + 
+    authorinput + '</p>'+ 
     '<button onclick="removeBook('+counter+')">Remove</button><hr></li>';
     let liTag = document.createElement('li');
+    liTag.setAttribute("id", counter + ''); 
     liTag.innerHTML = book.trim();
     booklist.appendChild(liTag)
-    console.log(booktitle);
     counter++;
 }
 function removeBook(id){
-    
+    let idTag = document.getElementById(id);
+    booklist.removeChild(idTag);
+} */
+
+function Addbook(){
+    //!Getting values from the input
+    let titleinput = document.getElementById('title').value;
+    let authorinput = document.getElementById('author').value;
+    //!Appending data to the array
+    BookArray.push([titleinput, authorinput]);
+    let bval = "";
+    for(i = o; i <BookArray.length; i++){
+        bval = bval + BookArray[i];
+    }
+    //!displaying array data
+    document.getElementById('').innerHTML = bval;
 }
