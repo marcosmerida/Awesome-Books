@@ -16,8 +16,10 @@ function removeBookFroList(index){
 }
 
 function printScreen(){
-    BookArray = [];
     BookArray = JSON.parse(localStorage.getItem('data'));
+    if(BookArray == null){
+        BookArray = [];
+    }
     booklist.innerHTML = "";
     BookArray.forEach(function(value, index){
         let book = '<li> <p>' + value[0] + '</p> <p>' + 
