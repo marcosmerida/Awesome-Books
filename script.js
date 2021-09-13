@@ -7,8 +7,8 @@ function printScreen() {
     BookArray = [];
   }
   booklist.innerHTML = '';
-  BookArray.forEach(function(value, index) {
-      const book = '<li> <p>' + value[0] + '</p> <p>' 
+  BookArray.forEach(function (value, index) {
+    const book = '<li> <p>' + value[0] + '</p> <p>'
       + value[1] + '</p>'
       + '<button onclick="removeBookFroList(' + index + ')">Remove</button><hr></li>';
     const liTag = document.createElement('li');
@@ -18,7 +18,11 @@ function printScreen() {
   });
 }
 
-function addBookToList(){
+function updateBookStorage(){
+    localStorage.setItem('data', JSON.stringify(BookArray));
+}
+
+function addBookToList() {
   const titleinput = document.getElementById('title').value;
   const authorinput = document.getElementById('author').value;
   BookArray.push([titleinput, authorinput]);
@@ -33,7 +37,3 @@ function removeBookFroList(index){
 }
 
 printScreen();
-
-function updateBookStorage(){
-  localStorage.setItem('data', JSON.stringify(BookArray));
-}
