@@ -16,6 +16,7 @@ function removeBookFroList(index){
 }
 
 function printScreen(){
+    BookArray = [];
     BookArray = JSON.parse(localStorage.getItem('data'));
     booklist.innerHTML = "";
     BookArray.forEach(function(value, index){
