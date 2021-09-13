@@ -18,8 +18,8 @@ function printScreen() {
   });
 }
 
-function updateBookStorage(){
-    localStorage.setItem('data', JSON.stringify(BookArray));
+function updateBookStorage() {
+  localStorage.setItem('data', JSON.stringify(BookArray));
 }
 
 function addBookToList() {
@@ -30,8 +30,8 @@ function addBookToList() {
   printScreen();
 }
 
-function removeBookFroList(index){
-  BookArray.splice(index,1);
+function removeBookFroList(index) {
+  BookArray.splice(index, 1);
   updateBookStorage();
   printScreen();
 }
