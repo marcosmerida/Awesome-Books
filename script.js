@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 class Book {
   title;
 
@@ -34,14 +35,15 @@ class AwesomeBooks {
 
 const booklist = document.getElementById('books');
 let BookArray = [];
+let awesomeBooks;
 
 function printScreen() {
   booklist.innerHTML = '';
-  let bookArray = JSON.parse(localStorage.getItem('data'));
+  const bookArray = JSON.parse(localStorage.getItem('data'));
   if (BookArray == null) {
     BookArray = [];
   }
-  let awesomeBooks = new AwesomeBooks(bookArray);
+  awesomeBooks = new AwesomeBooks(bookArray);
   if (awesomeBooks.allbooks.length > 0) {
     awesomeBooks.allbooks.forEach((book, index) => {
       const bookone = `<li> <p> ${book.title}</p> <p>${book.author}</p><button onclick='removeBookFroList(${index})'>Remove</button><hr></li>`;
