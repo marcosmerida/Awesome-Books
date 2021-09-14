@@ -53,17 +53,18 @@ class AwesomeBooks {
   allbooks = [];
 
   constructor(storedBooks) {
-    this.books = storedBooks;
+    this.allbooks = storedBooks;
   }
 
-  addBook(title, aithor) {
+  addBook(title, author) {
     let book = new Book(title, author);
     this.allbooks.push(book);
     this.#updateBookStorage();
   }
 
   removeBook(index) {
-    this.allbooks.slice(index, 1);
+    this.allbooks.splice(index, 1);
+    console.log("removed called");
     this.#updateBookStorage();
   }
 
