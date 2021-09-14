@@ -1,6 +1,6 @@
 # Awesome-Books
 
-This project was created with the objetive of learning how to storage data in the browser's memory using Arrays and the localstorage tool in javascript.
+This project was created with the objetive of learning how to use classes and it's respective methods.
 
 ![screenshot](screenshots/screenshot1.png)
 
@@ -28,6 +28,7 @@ To get a local copy up and running follow these simple example steps.
 
 - For anyone who wants to practice HTML5 and JavaScript.
 - How to storage data locally in the browser and Array practices.
+- Classes and construct practices.
 
 ## Authors
 
