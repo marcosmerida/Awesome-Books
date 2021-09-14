@@ -41,22 +41,19 @@ function printScreen() {
     });
   }
 
-  document.querySelectorAll('.removeBook').forEach(function(node){
-    node.addEventListener('click', function(event){
-       removeBookFroList(node.value)
-    })
+  function removeBookFroList(index) {
+    awesomeBooks.removeBook(index);
+    printScreen();
+  }
+
+  document.querySelectorAll('.removeBook').forEach ((node) => {
+    node.addEventListener('click', () => {
+      removeBookFroList(node.value);
+    });
 });
-
-}
-
-function removeBookFroList(index) {
-  awesomeBooks.removeBook(index);
-  printScreen();
 }
 
 printScreen();
-
- 
 
 document.getElementById('button').addEventListener('click', () => {
   const titleinput = document.getElementById('title').value;
