@@ -1,3 +1,4 @@
+
 class Book {
   title;
   author;
@@ -51,7 +52,6 @@ function printScreen() {
       booklist.appendChild(liTag);
     });
   }
-}
 
 function addBookToList() {
   const titleinput = document.getElementById('title').value;
