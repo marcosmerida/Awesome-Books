@@ -22,7 +22,6 @@ class AwesomeBooks {
 }
 
 const booklist = document.getElementById('books');
-const BookArray = [];
 let awesomeBooks;
 
 function printScreen() {
@@ -34,7 +33,7 @@ function printScreen() {
   awesomeBooks = new AwesomeBooks(bookArray);
   if (awesomeBooks.allbooks.length > 0) {
     awesomeBooks.allbooks.forEach((book, index) => {
-      const bookone = `<li> <p> ${book.title}</p> <p>${book.author}</p><button onclick='removeBookFroList(${index})'>Remove</button><hr></li>`;
+      const bookone = `<li> <p> ${book.title}</p> <p>${book.author}</p><button class='removeBook' value='${index}'>Remove</button><hr></li>`;
       const liTag = document.createElement('li');
       liTag.setAttribute('id', index);
       liTag.innerHTML = bookone.trim();
@@ -50,7 +49,9 @@ function removeBookFroList(index) {
 
 printScreen();
 
-const buttonbook = document.getElementById('button').addEventListener('click', () => {
+document.getElementsByClassName('removeBook').addEventListener('click', )
+
+document.getElementById('button').addEventListener('click', () => {
   const titleinput = document.getElementById('title').value;
   const authorinput = document.getElementById('author').value;
   awesomeBooks.addBook(titleinput, authorinput);
