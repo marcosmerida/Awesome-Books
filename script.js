@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 
-const booklist = document.getElementById('books');
+/* const booklist = document.getElementById('books');
 let BookArray = [];
 
 
@@ -37,4 +37,25 @@ function removeBookFroList(index) {
   printScreen();
 }
 
-printScreen();
+printScreen(); */
+
+class Book {
+  title;
+  author;
+
+  constructor(title, author) {
+    this.title = title;
+    this.author = author;
+  }
+}
+
+class AwesomeBooks {
+  constructor() {
+    this.books = [];
+  }
+
+  Addbook(books) {
+    this.books.push(books);
+  }
+  Removebook() {}
+}
