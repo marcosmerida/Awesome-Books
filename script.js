@@ -1,11 +1,5 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
-let buttonbook = document.getElementById('button').addEventListener('click', function addBookToList() {
-  const titleinput = document.getElementById('title').value;
-  const authorinput = document.getElementById('author').value;
-  awesomeBooks.addBook(titleinput, authorinput);
-  printScreen();
-});
 class AwesomeBooks {
   allbooks = [];
 
@@ -30,7 +24,7 @@ class AwesomeBooks {
 }
 
 const booklist = document.getElementById('books');
-let BookArray = [];
+const BookArray = [];
 let awesomeBooks;
 
 function printScreen() {
@@ -57,3 +51,10 @@ function removeBookFroList(index) {
 }
 
 printScreen();
+
+const buttonbook = document.getElementById('button').addEventListener('click', () => {
+  const titleinput = document.getElementById('title').value;
+  const authorinput = document.getElementById('author').value;
+  awesomeBooks.addBook(titleinput, authorinput);
+  printScreen();
+});
