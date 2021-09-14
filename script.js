@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 class AwesomeBooks {
   allbooks = [];
 
