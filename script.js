@@ -29,9 +29,9 @@ let awesomeBooks;
 
 function printScreen() {
   booklist.innerHTML = '';
-  const bookArray = JSON.parse(localStorage.getItem('data'));
-  if (BookArray == null) {
-    BookArray = [];
+  let bookArray = JSON.parse(localStorage.getItem('data'));
+  if (bookArray == null) {
+    bookArray = [];
   }
   awesomeBooks = new AwesomeBooks(bookArray);
   if (awesomeBooks.allbooks.length > 0) {
