@@ -1,6 +1,6 @@
-
 class Book {
   title;
+
   author;
 
   constructor(title, author) {
@@ -17,7 +17,7 @@ class AwesomeBooks {
   }
 
   addBook(title, author) {
-    let book = new Book(title, author);
+    const book = new Book(title, author);
     this.allbooks.push(book);
     this.#updateBookStorage();
   }
@@ -34,15 +34,14 @@ class AwesomeBooks {
 
 const booklist = document.getElementById('books');
 let BookArray = [];
-let awesomeBooks;
 
 function printScreen() {
   booklist.innerHTML = '';
-  bookArray = JSON.parse(localStorage.getItem('data'));
+  let bookArray = JSON.parse(localStorage.getItem('data'));
   if (BookArray == null) {
     BookArray = [];
   }
-  awesomeBooks = new AwesomeBooks(bookArray);
+  let awesomeBooks = new AwesomeBooks(bookArray);
   if (awesomeBooks.allbooks.length > 0) {
     awesomeBooks.allbooks.forEach((book, index) => {
       const bookone = `<li> <p> ${book.title}</p> <p>${book.author}</p><button onclick='removeBookFroList(${index})'>Remove</button><hr></li>`;
