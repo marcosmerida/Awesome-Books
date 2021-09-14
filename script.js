@@ -47,15 +47,71 @@ class Book {
     this.title = title;
     this.author = author;
   }
+
+
 }
 
 class AwesomeBooks {
-  constructor() {
-    this.books = [];
+  allbooks = []
+
+  constructor(storedBooks) {
+    this.books = storedBooks;
   }
 
-  Addbook(books) {
-    this.books.push(books);
+  addBook(title, aithor) {
+     let book = new Book(title, author);
+     this.allbooks.push(book)
+     this.#updateBookStorage()
   }
-  Removebook() {}
+
+  removeBook(index){
+    this.allbooks.slice(index,1);
+    this.#updateBookStorage();
+  }
+
+   #updateBookStorage() {
+    localStorage.setItem('data', JSON.stringify(this.allbooks));
+  }
+  
 }
+
+const booklist = document.getElementById('books');
+let BookArray = [];
+let awesomeBooks;
+
+function printScreen(){
+  booklist.innerHTML = '';
+  bookArray = JSON.parse(localStorage.getItem('data'));
+  if (BookArray == null) {
+    BookArray = [];
+  }
+  awesomeBooks = new AwesomeBooks(bookArray)
+  booklist.innerHTML = '';
+  if(awesomeBooks.allbooks.length > 0){
+     awesomeBooks.allbooks.forEach((book, index) => {
+      const book = `<li> <p> ${book.title}</p> <p>${book.author}</p><button onclick="removeBookFroList(${index})">Remove</button><hr></li>`;
+      const liTag = document.createElement('li');
+      liTag.setAttribute('id', index);
+      liTag.innerHTML = book.trim();
+      booklist.appendChild(liTag);
+     })
+  }
+}
+
+
+function addBookToList(){
+  const titleinput = document.getElementById('title').value;
+  const authorinput = document.getElementById('author').value;
+  awesomeBooks.addBook(titleinput,authorinput)
+  printScreen();
+}
+
+function removeBookFroList(index){
+   awesomeBooks.removeBook(index)
+   printScreen()
+}
+
+console.log("hi");
+printScreen();
+
+
