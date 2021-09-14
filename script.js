@@ -40,6 +40,13 @@ function printScreen() {
       booklist.appendChild(liTag);
     });
   }
+
+  document.querySelectorAll('.removeBook').forEach(function(node){
+    node.addEventListener('click', function(event){
+       removeBookFroList(node.value)
+    })
+});
+
 }
 
 function removeBookFroList(index) {
@@ -49,7 +56,7 @@ function removeBookFroList(index) {
 
 printScreen();
 
-document.getElementsByClassName('removeBook').addEventListener('click', )
+ 
 
 document.getElementById('button').addEventListener('click', () => {
   const titleinput = document.getElementById('title').value;
