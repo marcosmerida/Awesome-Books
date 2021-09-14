@@ -46,11 +46,11 @@ function printScreen() {
     printScreen();
   }
 
-  document.querySelectorAll('.removeBook').forEach ((node) => {
+  document.querySelectorAll('.removeBook').forEach((node) => {
     node.addEventListener('click', () => {
       removeBookFroList(node.value);
     });
-});
+  });
 }
 
 printScreen();
