@@ -17,9 +17,9 @@ class AwesomeBooks {
   }
 
   addBook(title, author) {
-      const book = new Book(title, author);
-      this.allbooks.push(book);
-      this.#updateBookStorage();
+    const book = new Book(title, author);
+    this.allbooks.push(book);
+    this.#updateBookStorage();
   }
 
   removeBook(index) {
