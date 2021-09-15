@@ -44,7 +44,7 @@ function printScreen() {
   awesomeBooks = new AwesomeBooks(bookArray);
   if (awesomeBooks.allbooks.length > 0) {
     awesomeBooks.allbooks.forEach((book, index) => {
-      const bookone = `<li> <p> ${book.title}</p> <p>${book.author}</p><button class='removeBook' value='${index}'>Remove</button><hr></li>`;
+      const bookone = `<li> <p> ${book.title} by ${book.author}</p><button class='removeBook' id='buttonremove' value='${index}'>Remove</button></li>`;
       const liTag = document.createElement('li');
       liTag.setAttribute('id', index);
       liTag.innerHTML = bookone.trim();
