@@ -100,7 +100,7 @@ button:hover {
 }
 
 #title {
-  margin-bottom: .5vw;
+  margin-bottom: 0.5vw;
   width: 15vw;
   height: 2vw;
   font-size: 1vw;
@@ -109,7 +109,7 @@ button:hover {
 #author {
   margin-bottom: 0.5vw;
   width: 15vw;
-  height: 2.0vw;
+  height: 2vw;
   font-size: 1vw;
 }
 
