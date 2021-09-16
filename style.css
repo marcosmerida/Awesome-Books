@@ -12,9 +12,34 @@
   background-color: #f4ebe8;
 }
 
-header{
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.3vw;
+.title-container ul {
+  margin: auto;
+  list-style: none;
+  display: inline-flex;
+  border: 2px double black;
+  height: 2vw;
+  border-radius: 5%;
+}
+.title-container ul li {
+  margin: auto;
+}
+.title-container ul li span {
+  margin-right: 5vw;
+}
+.title-container ul li button {
+  border: none;
+  background: none;
+  text-align: center;
+  font-size: 1.1vw;
+}
+.title-container ul li button:hover{
+  color: blue;
+  text-decoration: underline;
+  transition: 0s;
+}
+
+.contactList{
+  text-align: start;
 }
 
 #books {
@@ -68,7 +93,6 @@ button:hover {
 .input {
   width: max-content;
   margin: auto;
-  padding: 0%;
 }
 
 #title {
@@ -93,36 +117,6 @@ button:hover {
   display: none;
 }
 
-.title-container ul {
-  margin: auto;
-  list-style: none;
-  display: inline-flex;
-  border: 2px double black;
-  height: 2vw;
-  border-radius: 5%;
-}
-.title-container ul li {
-  margin: auto;
-}
-.title-container ul li span {
-  margin-right: 5vw;
-}
-.title-container ul li button {
-  border: none;
-  background: none;
-  text-align: center;
-  font-size: 1.1vw;
-}
-.title-container ul li button:hover{
-  color: blue;
-  text-decoration: underline;
-  transition: 0s;
-}
-
-.contactList{
-  text-align: start;
-}
-
 h2 {
   font-family: 'Roboto', sans-serif;
 }
@@ -139,4 +133,9 @@ footer{
   text-align: start;
   border: 1px solid black;
   border-radius: 32px;
+}
+
+header {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3vw;
 }
