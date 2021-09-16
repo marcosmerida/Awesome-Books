@@ -12,6 +12,12 @@
   background-color: #f4ebe8;
 }
 
+#menuAdd,
+#menuList,
+#menuContract {
+  cursor: pointer;
+}
+
 button {
   height: max-content;
   width: fit-content;
