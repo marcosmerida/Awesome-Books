@@ -100,9 +100,9 @@ button:hover {
 }
 
 #title {
-  margin-bottom: 0.5vw;
+  margin-bottom: .5vw;
   width: 15vw;
-  height: 2.0vw;
+  height: 2vw;
   font-size: 1vw;
 }
 
@@ -113,11 +113,11 @@ button:hover {
   font-size: 1vw;
 }
 
-#Inputs2AddBooks{
+#Inputs2AddBooks {
   display: none;
 }
 
-#contact{
+#contact {
   display: none;
 }
 
@@ -129,7 +129,7 @@ h1 {
   font-family: 'Roboto', sans-serif;
 }
 
-footer{
+footer {
   position: absolute;
   bottom: 6vw;
   width: 37vw;
