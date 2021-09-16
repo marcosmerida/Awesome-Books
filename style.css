@@ -12,6 +12,22 @@
   background-color: #f4ebe8;
 }
 
+button {
+  height: max-content;
+  width: fit-content;
+  float: right;
+  background-color: white;
+  margin-right: 2vw;
+  font-size: 1vw;
+  transition: 0.5s;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+  transition: 0.5s;
+}
+
 .title-container ul {
   margin: auto;
   list-style: none;
@@ -20,25 +36,29 @@
   height: 2vw;
   border-radius: 5%;
 }
+
 .title-container ul li {
   margin: auto;
 }
+
 .title-container ul li span {
   margin-right: 5vw;
 }
+
 .title-container ul li button {
   border: none;
   background: none;
   text-align: center;
   font-size: 1.1vw;
 }
-.title-container ul li button:hover{
+
+.title-container ul li button:hover {
   color: blue;
   text-decoration: underline;
   transition: 0s;
 }
 
-.contactList{
+.contactList {
   text-align: start;
 }
 
@@ -72,22 +92,6 @@
 #books li p:hover {
   font-size: 1.2vw;
   transition: 0.3s;
-}
-
-button {
-  height: max-content;
-  width: fit-content;
-  float: right;
-  background-color: white;
-  margin-right: 2vw;
-  font-size: 1vw;
-  transition: 0.5s;
-}
-
-button:hover {
-  background-color: black;
-  color: white;
-  transition: 0.5s;
 }
 
 .input {
