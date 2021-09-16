@@ -67,6 +67,14 @@ button:hover {
   height: 1.1vw;
   font-size: 1vw;
 }
+#addBookView{
+  display: none;
+}
+
+#contact{
+  display: none;
+}
+
 h2 {
   font-family: 'Roboto', sans-serif;
 }

@@ -72,3 +72,9 @@ document.getElementById('button').addEventListener('click', () => {
   awesomeBooks.addBook(titleinput, authorinput);
   printScreen();
 });
+
+document.getElementById('menuAdd').addEventListener('click',(event) => {
+  document.getElementById("listView").style.display = "none";
+  document.getElementById('contact').style.display = "none";
+  document.getElementById('menuAdd').style.display = "block";
+}); 
