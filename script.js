@@ -50,11 +50,11 @@ function printScreen() {
       liTag.innerHTML = bookone.trim();
       booklist.appendChild(liTag);
     });
-  }else{
-     const nobookText = `<li><p>No Books avialable</p></li>`;
-     const liTag = document.createElement('li');
-     liTag.innerHTML = nobookText.trim();
-     booklist.appendChild(liTag);
+  } else {
+    const nobookText = `<li><p>No Books avialable</p></li>`;
+    const liTag = document.createElement('li');
+    liTag.innerHTML = nobookText.trim();
+    booklist.appendChild(liTag);
   }
 
   function removeBookFroList(index) {
@@ -75,26 +75,25 @@ document.getElementById('button').addEventListener('click', () => {
   const titleinput = document.getElementById('title');
   const authorinput = document.getElementById('author');
   awesomeBooks.addBook(titleinput.value, authorinput.value);
-  titleinput.value = "";
-  authorinput.value = "";
-  alert("Book added")
+  titleinput.value = '';
+  authorinput.value = '';
   printScreen();
 });
 
-document.getElementById('menuAdd').addEventListener('click',(event) => {
-  document.getElementById("listView").style.display = "none";
-  document.getElementById('contact').style.display = "none";
-  document.getElementById('Inputs2AddBooks').style.display = "block";
+document.getElementById('menuAdd').addEventListener('click', () => {
+  document.getElementById("listView").style.display = 'none';
+  document.getElementById('contact').style.display = 'none';
+  document.getElementById('Inputs2AddBooks').style.display = 'block';
+});
+
+document.getElementById('menuContact').addEventListener('click', () => {
+  document.getElementById("listView").style.display = 'none';
+  document.getElementById('contact').style.display = 'block';
+  document.getElementById('Inputs2AddBooks').style.display = 'none';
 }); 
 
-document.getElementById('menuContact').addEventListener('click',(event) => {
-  document.getElementById("listView").style.display = "none";
-  document.getElementById('contact').style.display = "block";
-  document.getElementById('Inputs2AddBooks').style.display = "none";
-}); 
-
-document.getElementById('menuList').addEventListener('click',(event) => {
-  document.getElementById("listView").style.display = "block";
-  document.getElementById('contact').style.display = "none";
-  document.getElementById('Inputs2AddBooks').style.display = "none";
-}); 
+document.getElementById('menuList').addEventListener('click', () => {
+  document.getElementById("listView").style.display = 'block';
+  document.getElementById('contact').style.display = 'none';
+  document.getElementById('Inputs2AddBooks').style.display = 'none';
+});
