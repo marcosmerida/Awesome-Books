@@ -80,16 +80,14 @@ document.getElementById('button').addEventListener('click', () => {
     authorinput.value = '';
     printScreen();
   } else {
-    if(titleinput.value.length == 0){
-      console.log("Invalid")
+    if (titleinput.value.length === 0) {
       titleinput.setCustomValidity('Cannot be blank');
     }
-    if(authorinput.value.length == 0) {
-      console.log("Invalid")
+    if (authorinput.value.length === 0) {
       authorinput.setCustomValidity('Cannot be blank');
     }
   }
-  
+
 });
 
 document.getElementById('menuAdd').addEventListener('click', () => {
