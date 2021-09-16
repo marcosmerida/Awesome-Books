@@ -74,10 +74,22 @@ printScreen();
 document.getElementById('button').addEventListener('click', () => {
   const titleinput = document.getElementById('title');
   const authorinput = document.getElementById('author');
-  awesomeBooks.addBook(titleinput.value, authorinput.value);
-  titleinput.value = '';
-  authorinput.value = '';
-  printScreen();
+  if(titleinput.value.length > 0 && authorinput.value.length > 0){
+    awesomeBooks.addBook(titleinput.value, authorinput.value);
+    titleinput.value = '';
+    authorinput.value = '';
+    printScreen();
+  } else {
+    if(titleinput.value.length == 0){
+      console.log("Invalid")
+      titleinput.setCustomValidity('Cannot be blank');
+    }
+    if(authorinput.value.length == 0) {
+      console.log("Invalid")
+      authorinput.setCustomValidity('Cannot be blank');
+    }
+  }
+  
 });
 
 document.getElementById('menuAdd').addEventListener('click', () => {
