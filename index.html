@@ -1,26 +1,75 @@
-<!DOCTYPE html>
-<html>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="fonts.css">
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fonts.css" />
     <title>Awesome Books</title>
   </head>
   <body>
-    <header>
-      <h1>Awesome Books</h1>
+    <header class="fixed">
+      <div class="title-container">
+          <ul>
+            <li>
+              <span>Awesome Books</span>
+            </li>
+            <li>
+              <button id="menuList">List</button>
+            </li>
+            <li>
+              <button id="menuAdd">Add new</button>
+            </li>
+            <li>
+              <button id="menuContact">Contact</button>
+            </li>
+          </ul>
+      </div>
     </header>
-    <div>
+    <div id="listView">
+      <h1>Awesome Books</h1>
       <ul id="books"></ul>
     </div>
-
-    <div class="input">
-        <h2><p>Add a book</p></h2>
-      <input type="text" id="title" name="title" onfocus="this.value=''" placeholder="Title" /><br>
-      <input type="text" id="author" name="author" onfocus="this.value=''" placeholder="Author" /><br>
-      <button type="submit" value="Add" id="button">Add</button>
-      <p id="emptyalert"></p>
+    <div id="contact">
+      <h1>Contact Information</h1>
+      <p>Do you have any question or just want o say hello, you can contact us at</p>
+       <ul class="contactList">
+         <li>Our Email: mail@example.com</li>
+         <li>Our Phone Number: 0123 4567 9012</li>
+         <li>Our Address : Plot 1 Fake Street. Los Angeles, USA</li>
+       </ul>
     </div>
 
+    <div class="input" id="Inputs2AddBooks">
+      <h2><p>Add a book</p></h2>
+      <input
+        type="text"
+        id="title"
+        name="title"
+        onfocus="this.value=''"
+        placeholder="Title"
+        required
+      /><br />
+      <input
+        type="text"
+        id="author"
+        name="author"
+        onfocus="this.value=''"
+        placeholder="Author"
+        required
+      /><br />
+      <button type="submit" value="Add" id="button">Add</button>
+      <p id="emptyalert"></p>
+    </div> 
+
+    <footer>
+       <div>
+         <p>Copyright &copy; AwesomeBooks 2021</p>
+       </div>
+    </footer>
+
+
     <script src="script.js" type="text/javascript"></script>
+    <script src="https://kit.fontawesome.com/69c7e163a7.js" crossorigin="anonymous"></script>
   </body>
 </html>

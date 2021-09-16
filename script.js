@@ -50,6 +50,11 @@ function printScreen() {
       liTag.innerHTML = bookone.trim();
       booklist.appendChild(liTag);
     });
+  } else {
+    const nobookText = '<li><p>No Books avialable</p></li>';
+    const liTag = document.createElement('li');
+    liTag.innerHTML = nobookText.trim();
+    booklist.appendChild(liTag);
   }
 
   function removeBookFroList(index) {
@@ -67,8 +72,37 @@ function printScreen() {
 printScreen();
 
 document.getElementById('button').addEventListener('click', () => {
-  const titleinput = document.getElementById('title').value;
-  const authorinput = document.getElementById('author').value;
-  awesomeBooks.addBook(titleinput, authorinput);
-  printScreen();
+  const titleinput = document.getElementById('title');
+  const authorinput = document.getElementById('author');
+  if (titleinput.value.length > 0 && authorinput.value.length > 0) {
+    awesomeBooks.addBook(titleinput.value, authorinput.value);
+    titleinput.value = '';
+    authorinput.value = '';
+    printScreen();
+  } else {
+    if (titleinput.value.length === 0) {
+      titleinput.setCustomValidity('Cannot be blank');
+    }
+    if (authorinput.value.length === 0) {
+      authorinput.setCustomValidity('Cannot be blank');
+    }
+  }
+});
+
+document.getElementById('menuAdd').addEventListener('click', () => {
+  document.getElementById('listView').style.display = 'none';
+  document.getElementById('contact').style.display = 'none';
+  document.getElementById('Inputs2AddBooks').style.display = 'block';
+});
+
+document.getElementById('menuContact').addEventListener('click', () => {
+  document.getElementById('listView').style.display = 'none';
+  document.getElementById('contact').style.display = 'block';
+  document.getElementById('Inputs2AddBooks').style.display = 'none';
+});
+
+document.getElementById('menuList').addEventListener('click', () => {
+  document.getElementById('listView').style.display = 'block';
+  document.getElementById('contact').style.display = 'none';
+  document.getElementById('Inputs2AddBooks').style.display = 'none';
 });

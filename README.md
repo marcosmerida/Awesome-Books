@@ -1,12 +1,12 @@
 # Awesome-Books
 
-This project was created with the objetive of learning how to use classes and it's respective methods.
+This project was created with the objetive of learning how to use classes, it's respective methods and the usage of differents tools in the CSS coding.
 
 ![screenshot](screenshots/screenshot1.png)
 
 ## Built With
 
-- HTML & JavaScript
+- HTML, JavaScript & CSS
 
 ## Live Demo
 
