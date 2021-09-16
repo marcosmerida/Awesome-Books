@@ -74,7 +74,7 @@ printScreen();
 document.getElementById('button').addEventListener('click', () => {
   const titleinput = document.getElementById('title');
   const authorinput = document.getElementById('author');
-  if (titleinput.value.length > 0 && authorinput.value.length > 0){
+  if (titleinput.value.length > 0 && authorinput.value.length > 0) {
     awesomeBooks.addBook(titleinput.value, authorinput.value);
     titleinput.value = '';
     authorinput.value = '';
