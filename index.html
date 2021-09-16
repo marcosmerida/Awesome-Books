@@ -10,39 +10,34 @@
   <body>
     <header class="fixed">
       <div class="title-container">
-        <nav class="navbar">
           <ul>
             <li>
-              <p>Awesome Books</p>
+              <span>Awesome Books</span>
             </li>
             <li>
-              <a href="">List</a>
+              <button id="menuList">List</button>
             </li>
             <li>
-              <p id="menuAdd">Add new</p>
+              <button id="menuAdd">Add new</button>
             </li>
             <li>
-              <a href="">Contact</a>
+              <button id="menuContact">Contact</button>
             </li>
           </ul>
-        </nav>
       </div>
     </header>
     <div id="listView">
       <h1>Awesome Books</h1>
       <ul id="books"></ul>
     </div>
-
     <div id="addBookView">
       <h1>Add New Book</h1>
-      <ul id="books"></ul>
     </div>
     <div id="contact">
       <h1>Contact Information</h1>
-      <ul id="books"></ul>
     </div>
 
-    <div class="input">
+    <div class="input" id="Inputs2AddBooks">
       <h2><p>Add a book</p></h2>
       <input
         type="text"
@@ -60,7 +55,7 @@
       /><br />
       <button type="submit" value="Add" id="button">Add</button>
       <p id="emptyalert"></p>
-    </div>
+    </div> 
 
     <script src="script.js" type="text/javascript"></script>
     <script src="https://kit.fontawesome.com/69c7e163a7.js" crossorigin="anonymous"></script>

@@ -76,5 +76,20 @@ document.getElementById('button').addEventListener('click', () => {
 document.getElementById('menuAdd').addEventListener('click',(event) => {
   document.getElementById("listView").style.display = "none";
   document.getElementById('contact').style.display = "none";
-  document.getElementById('menuAdd').style.display = "block";
+  document.getElementById('addBookView').style.display = "block";
+  document.getElementById('Inputs2AddBooks').style.display = "block";
+}); 
+
+document.getElementById('menuContact').addEventListener('click',(event) => {
+  document.getElementById("listView").style.display = "none";
+  document.getElementById('contact').style.display = "block";
+  document.getElementById('addBookView').style.display = "none";
+  document.getElementById('Inputs2AddBooks').style.display = "none";
+}); 
+
+document.getElementById('menuList').addEventListener('click',(event) => {
+  document.getElementById("listView").style.display = "block";
+  document.getElementById('contact').style.display = "none";
+  document.getElementById('addBookView').style.display = "none";
+  document.getElementById('Inputs2AddBooks').style.display = "none";
 }); 

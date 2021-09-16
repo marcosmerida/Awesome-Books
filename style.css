@@ -4,10 +4,16 @@
   margin-bottom: 5vw;
   padding: 1vw;
   padding-top: 0%;
-  width: 30vw;
+  width: 40vw;
   border: 1px solid black;
+  box-shadow: 8px 5px 5px 5px #c3c3c3;
   text-align: center;
   border-radius: 5%;
+  background-color: #f4ebe8;
+}
+header{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3vw;
 }
 #books {
   padding: 0%;
@@ -73,6 +79,32 @@ button:hover {
 
 #contact{
   display: none;
+}
+
+.title-container ul {
+  margin: auto;
+  list-style: none;
+  display: inline-flex;
+  border: 2px double black;
+  height: 2vw;
+  border-radius: 5%;
+}
+.title-container ul li {
+  margin: auto;
+}
+.title-container ul li span {
+  margin-right: 5vw;
+}
+.title-container ul li button {
+  border: none;
+  background: none;
+  text-align: center;
+  font-size: 1.1vw;
+}
+.title-container ul li button:hover{
+  color: blue;
+  text-decoration: underline;
+  transition: 0s;
 }
 
 h2 {
